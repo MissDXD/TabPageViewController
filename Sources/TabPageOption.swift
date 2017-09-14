@@ -34,19 +34,19 @@ public struct TabPageOption {
     internal var tabBarAlpha: CGFloat {
         return isTranslucent ? 0.95 : 1.0
     }
-    internal var tabBackgroundImage: UIImage {
-        return convertImage()
-    }
-
-    fileprivate func convertImage() -> UIImage {
-        let rect : CGRect = CGRect(x: 0, y: 0, width: 1, height: 1)
-        UIGraphicsBeginImageContext(rect.size)
-        let context : CGContext? = UIGraphicsGetCurrentContext()
-        let backgroundColor = tabBackgroundColor.withAlphaComponent(tabBarAlpha).cgColor
-        context?.setFillColor(backgroundColor)
-        context?.fill(rect)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        return image
-    }
+//    internal var tabBackgroundImage: UIImage {
+//        return convertImage()
+//    }
+//
+//    fileprivate func convertImage() -> UIImage {
+//        let rect : CGRect = CGRect(x: 0, y: 0, width: 1, height: 1)
+//        UIGraphicsBeginImageContext(rect.size)
+//        let context : CGContext? = UIGraphicsGetCurrentContext()
+//        let backgroundColor = tabBackgroundColor.withAlphaComponent(tabBarAlpha).cgColor
+//        context?.setFillColor(backgroundColor)
+//        context?.fill(rect)
+//        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+//        UIGraphicsEndImageContext()
+//        return image
+//    }
 }
